@@ -1,0 +1,37 @@
+site_name: EngFlow Free Tier Documentation
+docs_dir: content
+repo_url: https://github.com/engflow/free
+
+theme:
+  name: "material"
+  custom_dir: overrides
+  favicon: "assets/images/icon-rounded-rectangle.svg"
+  logo: "assets/images/icon-on-dark.svg"
+  palette:
+    primary: "blue grey"
+    accent: "blue"
+  features:
+    - navigation.expand
+    - content.code.copy
+    - content.code.select
+    - toc.integrate
+plugins:
+  - section-index
+
+nav:
+  - 'Overview': 'index.md'
+  - 'Getting Started': 'getting-started.md'
+  - 'Deployment':
+    - 'Using Docker': 'deployment/docker.md'
+    - 'Using Docker Compose': 'deployment/docker-compose.md'
+    - 'Using Kubernetes': 'deployment/kubernetes.md'
+  - Support: 'support.md'
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
